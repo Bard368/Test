@@ -37,7 +37,7 @@ class ChatAgent:
             }
         ]
         
-        # Реєструємо функції у словнику
+        
         self.available_tools = {
             "get_weather": get_weather,
             "get_exchange_rate": get_exchange_rate,
@@ -51,7 +51,7 @@ class ChatAgent:
             "shorten_url": shorten_url
         }
         
-        # Схеми інструментів для OpenAI
+        
         self.tools_schema = [
             {"type": "function", "function": {"name": "get_weather", "description": "Погода", "parameters": {"type": "object", "properties": {"city": {"type": "string"}}, "required": ["city"]}}},
             {"type": "function", "function": {"name": "get_exchange_rate", "description": "Курс фіатних валют", "parameters": {"type": "object", "properties": {"from_currency": {"type": "string"}, "to_currency": {"type": "string"}}, "required": ["from_currency", "to_currency"]}}},
@@ -61,7 +61,7 @@ class ChatAgent:
             {"type": "function", "function": {"name": "get_latest_news", "description": "Останні новини (NewsAPI).", "parameters": {"type": "object", "properties": {"topic": {"type": "string", "description": "Тема новин"}}, "required": ["topic"]}}},
             {"type": "function", "function": {"name": "search_wikipedia", "description": "Довідка з Вікіпедії.", "parameters": {"type": "object", "properties": {"query": {"type": "string", "description": "Що шукати"}}, "required": ["query"]}}},
             
-            # --- НОВІ СУПЕР-ІНСТРУМЕНТИ ---
+            
             {"type": "function", "function": {"name": "get_system_status", "description": "Отримати інформацію про завантаження CPU, RAM та батареї поточного комп'ютера.", "parameters": {"type": "object", "properties": {}}}},
             {"type": "function", "function": {"name": "generate_qr_code", "description": "Згенерувати QR-код і зберегти як картинку.", "parameters": {"type": "object", "properties": {"data": {"type": "string", "description": "Текст або URL для зашифровки"}, "filename": {"type": "string", "description": "Назва файлу, наприклад my_qr.png"}}, "required": ["data"]}}},
             {"type": "function", "function": {"name": "shorten_url", "description": "Скоротити довге посилання.", "parameters": {"type": "object", "properties": {"long_url": {"type": "string", "description": "Оригінальний довгий URL"}}, "required": ["long_url"]}}}
