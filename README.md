@@ -3,7 +3,6 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![OpenAI](https://img.shields.io/badge/LLM-OpenAI_gpt--4o--mini-green.svg)](https://openai.com/)
 
-Виконане тестове завдання на позицію **Python Developer — AI Agents**.
 
 Проєкт являє собою повністю асинхронного AI-агента, який виконує роль розумного особистого помічника. Агент автономно визначає наміри користувача (Intents), паралельно викликає необхідні інструменти (Function Calling) та підтримує безперервний контекстний діалог у консолі.
 
